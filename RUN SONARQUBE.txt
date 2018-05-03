@@ -1,0 +1,67 @@
+                                         HOW TO SETUP AND RUN SONARQUBE:
+
+From Soft tech computer:
+  Remote desktop Conection
+    From Computer, type "http://10.1.1.115"
+     (username: stci\TSAWorker;  password: TSAsand1)
+
+OR from TSA laptop:
+    - Disconnect Cisco Any Connection Security Mobility
+    - Remote desktop Conection
+       From Computer, type "http://10.1.1.115"
+        (username: stci\TSAWorker;  password: TSAsand1)
+
+
+1) From C:\tools
+  download: sonar-runner-2.4
+   After you download, you see below:
+      bin: sonar-runner
+      conf: sonar-runner.properties
+      lib: sonar-runner-dist-2.4
+
+2) From NotePad, create file "runFAS" with content below
+   C:\tools\sonar-runner-2.4\bin\sonar-runner -Dsonar.projectKey=FAS -Dsonar.sources=C:\projects\CODE-RELEASE5.4 -Dsonar.java.binaries=C:\projects\CODE-RELEASE5.4\bin
+
+3) Copy source code from your DDD  to TSA laptop and then from TSA laptop copy source code to 
+   C:\projects\CODE-RELEASE5.4
+      copy source code to this folder: src
+      create folder: bin
+
+4)From command prompt: type C:\projects
+      type runFAS.bat
+
+    This execute FAS code takes couple minutes to get done
+    you see EXECUTION SUCCESS
+
+5) From Google: Type URL below
+http://localhost:9000/projects
+  You can see Projects FAS5.4
+    Click on FAS5.4
+    Click on Issues
+       Bugs:
+           Blocker: 11
+           Critical: 23
+           Major: 83
+           Minor: 17
+       Vunerability:
+           Blocker: 51
+           Critical: 13
+           Major: 0
+           Minor: 225
+       Code Smell:
+           Blocker: 30
+           Critical: 2,400
+           Major: 3,700
+           Minor: 11,000
+           Info: 36
+
+
+
+
+
+
+
+
+
+
+      
